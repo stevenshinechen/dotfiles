@@ -4,7 +4,7 @@
  
 [alias] 
         au = !git add -u && git status 
-        unstage = restore --staged 
+        unstage = !git restore --staged "$@" && git status
         cm = commit -m 
         ca = commit --amend -m 
         cane = commit --amend --no-edit 
