@@ -1,0 +1,15 @@
+[push] 
+        autoSetupRemote = true 
+ 
+ 
+[alias] 
+        au = !git add -u && git status 
+        unstage = restore --staged 
+        cm = commit -m 
+        ca = commit --amend -m 
+        cane = commit --amend --no-edit 
+        co = checkout 
+        cb = checkout -b 
+        s = status 
+        br = branch 
+        brd = branch -d 
