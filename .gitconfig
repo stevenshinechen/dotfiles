@@ -1,15 +1,32 @@
 [push] 
-        autoSetupRemote = true 
+  # Automatically set up remote tracking for new branches on first push
+	autoSetupRemote = true 
  
  
 [alias] 
-        au = !git add -u && git status 
-        unstage = !git restore --staged "$@" && git status
-        cm = commit -m 
-        ca = commit --amend -m 
-        cane = commit --amend --no-edit 
-        co = checkout 
-        cb = checkout -b 
-        s = status 
-        br = branch 
-        brd = branch -d 
+	# Stage all modified/deleted files and show status
+	au = !git add -u && git status 
+	
+	# Unstage files and show status (usage: git unstage <file1> <file2> ...)
+	unstage = !git restore --staged "$@" && git status
+	
+	# Commit with message (usage: git cm "message")
+	cm = commit -m 
+	
+	# Amend last commit with new message (usage: git ca "new message")
+	ca = commit --amend -m 
+	
+	# Amend last commit without changing message
+	cane = commit --amend --no-edit 
+	
+	co = checkout 
+	
+	# Create and checkout new branch (usage: git cb branch-name)
+	cb = checkout -b 
+	
+	s = status 
+	
+	br = branch 
+	
+	# Delete a branch (usage: git brd branch-name)
+	brd = branch -d
